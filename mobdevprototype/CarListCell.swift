@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarCell: UICollectionViewCell {
+class CarListCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -31,9 +31,11 @@ class CarCell: UICollectionViewCell {
     
     let carInfoLabel: UILabel = {
         let label = UILabel()
-        
-        let attributedText = NSMutableAttributedString(string: "Automatic • Gasoline • 38,000 km", attributes: [NSForegroundColorAttributeName: UIColor.darkGray, NSFontAttributeName: UIFont.systemFont(ofSize: 12)])
-        label.attributedText = attributedText
+        label.text = "Automatic • Gasoline • 38,000 km"
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = UIColor.darkGray
+//        let attributedText = NSMutableAttributedString(string: "Automatic • Gasoline • 38,000 km", attributes: [NSForegroundColorAttributeName: UIColor.darkGray, NSFontAttributeName: UIFont.systemFont(ofSize: 12)])
+//        label.attributedText = attributedText
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -135,22 +137,22 @@ class CarCell: UICollectionViewCell {
         previewImage.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
         previewImage.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         previewImage.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
-        previewImage.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        previewImage.heightAnchor.constraint(equalToConstant: 140).isActive = true
         
         gradientView.leftAnchor.constraint(equalTo: previewImage.leftAnchor).isActive = true
         gradientView.bottomAnchor.constraint(equalTo: previewImage.bottomAnchor).isActive = true
         gradientView.rightAnchor.constraint(equalTo: previewImage.rightAnchor).isActive = true
-        gradientView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        gradientView.heightAnchor.constraint(equalToConstant: 90).isActive = true
         
         nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5).isActive = true
         nameLabel.topAnchor.constraint(equalTo: previewImage.bottomAnchor, constant: 8).isActive = true
         nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 5).isActive = true
-        //        nameLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        nameLabel.heightAnchor.constraint(equalToConstant: 20).isActive = false
         
         carInfoLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5).isActive = true
         carInfoLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5).isActive = true
         carInfoLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 5).isActive = true
-        //        carInfoLabel(equalToConstant: 20).isActive = true
+        carInfoLabel.heightAnchor.constraint(equalToConstant: 20).isActive = false
         
         priceImage.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5).isActive = true
         priceImage.topAnchor.constraint(equalTo: carInfoLabel.bottomAnchor, constant: 5).isActive = true
