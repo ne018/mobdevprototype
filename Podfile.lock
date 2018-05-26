@@ -13,6 +13,7 @@ PODS:
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
   - SwiftyJSON (4.0.0)
+  - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.0)
   - RealmSwift
   - SwiftyJSON
+  - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -30,7 +32,8 @@ SPEC CHECKSUMS:
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: 3da8d3812ce5b52741e78bdd573b5d84fc12529a
+PODFILE CHECKSUM: 20fbc98f558615a702859e393a1e176b544b6c15
 
 COCOAPODS: 1.3.1
