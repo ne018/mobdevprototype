@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let feedController = ListCarsController(collectionViewLayout: UICollectionViewFlowLayout())
+        let feedController = CarListController(collectionViewLayout: UICollectionViewFlowLayout())
         let navigationController = UINavigationController(rootViewController: feedController)
         window?.rootViewController = navigationController
         

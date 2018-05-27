@@ -10,7 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 
 
-class ListCarsController: UICollectionViewController, UICollectionViewDelegateFlowLayout, NVActivityIndicatorViewable {
+class CarListController: UICollectionViewController, UICollectionViewDelegateFlowLayout, NVActivityIndicatorViewable {
     
     private let cellID = "cellID"
     
@@ -23,6 +23,7 @@ class ListCarsController: UICollectionViewController, UICollectionViewDelegateFl
     var firstLoad = false
     var maxitems = 10
     var dumaanNa = false
+    public var sortlink:String = "" // sort:oldest, sort:newest, sort:price-low, sort:price-high, sort:mileage-low, sort:mileage-high
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +41,44 @@ class ListCarsController: UICollectionViewController, UICollectionViewDelegateFl
         collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
         collectionView?.register(CarListCell.self, forCellWithReuseIdentifier: cellID)
         
+        // notify reload
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name:NSNotification.Name(rawValue: "load"), object: nil)
+        
         refresher = UIRefreshControl()
         refresher.tintColor = UIColor(red: 0/225, green: 111/255, blue: 193/255, alpha: 1)
-        refresher.addTarget(self, action: #selector(ListCarsController.refresh), for: UIControlEvents.valueChanged)
+        refresher.addTarget(self, action: #selector(CarListController.refresh), for: UIControlEvents.valueChanged)
         collectionView?.addSubview(refresher!)
         
-        self.loadMoreData(page: 1)
-        print("HAHAHAHAHA")
+        self.loadMoreData(page: 1, sort: self.sortlink)
+        print("DID LOAD")
+        
+        setupNavBarButtons()
+    }
+    
+    func loadList(notification: NSNotification){
+        if let sortlink_ = notification.userInfo!["sortlink"] as? String {
+            self.sortlink = sortlink_
+        }
+        
+        if let sortname = notification.userInfo!["sortname"] as? String {
+            navigationItem.title = sortname == "" ? "Carlist" : "Carlist - \(sortname)"
+        }
+        
+        self.refresh()
+    }
+    
+    func setupNavBarButtons(){
+        let moreButtonItem = UIBarButtonItem(image: UIImage(named: "nav-Icon-App-20x20"), style: .plain, target: self, action: #selector(handleMore))
+        moreButtonItem.tintColor = UIColor.white
+        navigationItem.rightBarButtonItems = [moreButtonItem]
+        
+    }
+    
+    let filterLauncher = FilterLauncher()
+    
+    func handleMore(){
+        // show filter
+        filterLauncher.showFilter()
     }
     
     func refresh() {
@@ -55,7 +87,7 @@ class ListCarsController: UICollectionViewController, UICollectionViewDelegateFl
             self.pagenum = 1
             self.fromRefresh = true
             self.firstLoad = true
-            self.loadMoreData(page: 1)
+            self.loadMoreData(page: 1, sort: self.sortlink)
             
             self.collectionView?.reloadData()
         }
@@ -63,14 +95,14 @@ class ListCarsController: UICollectionViewController, UICollectionViewDelegateFl
         self.fromRefresh = false
     }
     
-    func loadMoreData(page: Int) {
+    func loadMoreData(page: Int, sort: String) {
         self.startAnimating()
         
         let env = ApiEnvironment.production
         let context = NonPersistentApiContext(environment: env)
         let carListService = AlamofireCarListService(context: context)
 
-        carListService.getAllCarList(page: page, maxitems: maxitems) { (carlistresult, error) in
+        carListService.getAllCarList(page: page, maxitems: maxitems, sort: sortlink) { (carlistresult, error) in
             if let error = error {
                 self.stopAnimating()
                 self.alertMessage(title: "Network Error", message: "Please connect to internet.")
@@ -154,11 +186,24 @@ class ListCarsController: UICollectionViewController, UICollectionViewDelegateFl
         let thecarlists = carlists[indexPath.row]
         if let nameText = thecarlists.data?.name {
             let rect = NSString(string: nameText).boundingRect(with: CGSize(width: view.frame.width, height: 500), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14)], context: nil)
-            let knownHeight: CGFloat  = 140 + 20 + 20 + 20 + 15 + 30
+            let knownHeight: CGFloat  = 140 + 20 + 20 + 20 + 15 + 30 + 20
             return CGSize(width: view.frame.width, height: knownHeight + rect.height)
         }
         
         return CGSize(width: view.frame.width, height: 250)
+    }
+    
+    
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maximumOffset - currentOffset <= -20 {
+            let when = DispatchTime.now() + 0.1
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.loadMoreData(page: self.pagenum, sort: self.sortlink)
+            }
+        }
     }
     
 

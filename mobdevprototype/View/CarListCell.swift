@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarListCell: UICollectionViewCell {
+class BaseCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -20,9 +20,17 @@ class CarListCell: UICollectionViewCell {
         setupViews()
     }
     
+    func setupViews(){
+        // ready to override
+    }
+    
+}
+
+class CarListCell: BaseCell {
+    
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         let attributedText = NSMutableAttributedString(string: "Honda Civic 2013", attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14)])
         label.attributedText = attributedText
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -120,7 +128,7 @@ class CarListCell: UICollectionViewCell {
         return label
     }()
     
-    func setupViews(){
+    override func setupViews(){
         backgroundColor = UIColor.white
         
         contentView.addSubview(previewImage)
