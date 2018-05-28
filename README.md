@@ -4,7 +4,7 @@ Mobile Developer Test Prototype for pre-examination for job application.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These repo will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
