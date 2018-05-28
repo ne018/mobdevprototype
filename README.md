@@ -18,6 +18,12 @@ XCode supported Swift version 3.2
 
 * [Swift Programming Language](https://developer.apple.com/swift/) - iOS Programming Language
 * [CocoaPods](https://cocoapods.org/about) - Dependency Management
+* [Alamofire](https://github.com/Alamofire/Alamofire) - HTTP networking library
+* [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) - Convert your model objects to and from JSON.
+* [AlamofireObjectMapper](https://github.com/tristanhimmelman/AlamofireObjectMapper) - Converts JSON response data into swift objects.
+* [SwiftJSON](https://github.com/SwiftyJSON/SwiftyJSON) - JSON data in Swift.
+* [RealmSwift](https://github.com/realm/realm-cocoa) - is a mobile database that runs directly inside phones, tablets or wearables. This repository holds the source code for the iOS, macOS, tvOS & watchOS versions of Realm Swift & Realm Objective-C.
+* [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView) - is a collection of awesome loading animations. 
 
 ## Versioning
 
