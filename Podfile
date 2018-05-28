@@ -12,7 +12,6 @@ target 'mobdevprototype' do
   pod 'SwiftyJSON'
   pod 'RealmSwift'
   pod 'NVActivityIndicatorView'
-  pod 'XLPagerTabStrip', '~> 8.0'
 
   target 'mobdevprototypeTests' do
     inherit! :search_paths
