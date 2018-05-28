@@ -11,6 +11,7 @@ import ObjectMapper
 
 class ApiMessagesEntity: NSObject, Mappable, MessagesEntity {
     
+    var id = 1
     private var _success = [String]()
     var success: [String] {
         return _success

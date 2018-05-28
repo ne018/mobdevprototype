@@ -9,6 +9,7 @@
 import Foundation
 
 protocol ListCarsResponse: class {
+    var id: Int { get }
     var success: Bool { get }
     var messages: MessagesEntity? { get }
     var session: SessionEntity? { get }

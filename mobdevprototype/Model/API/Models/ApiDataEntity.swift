@@ -11,6 +11,7 @@ import ObjectMapper
 
 class ApiDataEntity: NSObject, Mappable, DataEntity {
     
+    var data_id = 1
     var fk_country = ""
     var status = ""
     var attribute_set_name = ""
@@ -51,7 +52,7 @@ class ApiDataEntity: NSObject, Mappable, DataEntity {
     var original_name = ""
     var root_category = ""
     var agency_logo = ""
-    var new_product = ""
+    var TheNewProduct = ""
     var url = ""
     var id = ""
     var location_latitude = ""
@@ -104,10 +105,10 @@ class ApiDataEntity: NSObject, Mappable, DataEntity {
     var fuel = ""
     var fuel_position = ""
     var fuel_id = ""
-    private var _simples: ApiSimplesEntity?
-    var simples: SimplesEntity? {
-        return _simples
-    }
+//    private var _simples: ApiSimplesEntity?
+//    var simples: SimplesEntity? {
+//        return _simples
+//    }
     private var _attributes: ApiAttributesEntity?
     var attributes: AttributesEntity? {
         return _attributes
@@ -162,7 +163,7 @@ class ApiDataEntity: NSObject, Mappable, DataEntity {
         original_name <- map["original_name"]
         root_category <- map["root_category"]
         agency_logo <- map["agency_logo"]
-        new_product <- map["new_product"]
+        TheNewProduct <- map["new_product"]
         url <- map["url"]
         id <- map["id"]
         location_latitude <- map["location_latitude"]
@@ -215,7 +216,7 @@ class ApiDataEntity: NSObject, Mappable, DataEntity {
         fuel <- map["fuel"]
         fuel_position <- map["fuel_position"]
         fuel_id <- map["fuel_id"]
-        _simples <- map["simples"]
+//        _simples <- map["simples"]
         _attributes <- map["attributes"]
     }
 }

@@ -19,6 +19,7 @@ class ApiDetailsEntity: NSObject, Mappable, DetailsEntity{
         super.init()
     }
     
+    var id = 1
     var name = ""
     var label = ""
     var label_en = ""

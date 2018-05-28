@@ -11,6 +11,7 @@ import ObjectMapper
 
 class ApiMetadataEntity: NSObject, Mappable, MetadataEntity {
     
+    var id = 1
     var product_count = ""
     private var _results = [ApiResultsEntity]()
     var results: [ResultsEntity] {

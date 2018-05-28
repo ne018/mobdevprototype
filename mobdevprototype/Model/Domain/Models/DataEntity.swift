@@ -9,6 +9,8 @@
 import Foundation
 
 protocol DataEntity: class {
+    
+    var data_id: Int { get }
     var fk_country: String { get }
     var status: String { get }
     var attribute_set_name: String { get }
@@ -49,7 +51,7 @@ protocol DataEntity: class {
     var original_name: String { get }
     var root_category: String { get }
     var agency_logo: String { get }
-    var new_product: String { get }
+    var TheNewProduct: String { get }
     var url: String { get }
     var id: String { get }
     var location_latitude: String { get }
@@ -102,6 +104,6 @@ protocol DataEntity: class {
     var fuel: String { get }
     var fuel_position: String { get }
     var fuel_id: String { get }
-    var simples: SimplesEntity? { get }
+//    var simples: SimplesEntity? { get }
     var attributes: AttributesEntity? { get }
 }

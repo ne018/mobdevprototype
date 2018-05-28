@@ -9,6 +9,7 @@
 import Foundation
 
 protocol OptionalEntity: class {
+    var id: Int { get }
     var name: String { get }
     var label: String { get }
     var label_en: String { get }

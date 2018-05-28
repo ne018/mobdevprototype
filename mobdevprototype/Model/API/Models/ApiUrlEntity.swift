@@ -19,6 +19,7 @@ class ApiUrlEntity: NSObject, Mappable, UrlEntity{
         super.init()
     }
     
+    var id = 1
     var url = ""
     
     func mapping(map: Map){

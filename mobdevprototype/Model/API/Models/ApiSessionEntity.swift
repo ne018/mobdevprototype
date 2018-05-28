@@ -11,6 +11,7 @@ import ObjectMapper
 
 class ApiSessionEntity: NSObject, Mappable, SessionEntity {
     
+    var session_id = 1
     var id = ""
     var expire = ""
     var YII_CSRF_TOKEN = ""

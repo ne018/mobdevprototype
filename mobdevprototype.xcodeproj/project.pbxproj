@@ -32,6 +32,18 @@
 		AF37430020B882AB00E721F8 /* AlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3742FF20B882AB00E721F8 /* AlamofireService.swift */; };
 		AF37430320B8834400E721F8 /* AlamofireCarListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37430220B8834400E721F8 /* AlamofireCarListService.swift */; };
 		AF37430520B8946C00E721F8 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37430420B8946C00E721F8 /* AlertHelper.swift */; };
+		AF95E3EE20BB2BBF00FF4D23 /* RealmListCarsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3ED20BB2BBF00FF4D23 /* RealmListCarsResponse.swift */; };
+		AF95E3F020BB308800FF4D23 /* RealmMessagesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3EF20BB308800FF4D23 /* RealmMessagesEntity.swift */; };
+		AF95E3F220BB33B500FF4D23 /* RealmSessionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3F120BB33B500FF4D23 /* RealmSessionEntity.swift */; };
+		AF95E3F420BB347B00FF4D23 /* RealmMetadataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3F320BB347B00FF4D23 /* RealmMetadataEntity.swift */; };
+		AF95E3F620BB35A900FF4D23 /* RealmResultsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3F520BB35A900FF4D23 /* RealmResultsEntity.swift */; };
+		AF95E3F820BB36A200FF4D23 /* RealmOptionalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3F720BB36A200FF4D23 /* RealmOptionalEntity.swift */; };
+		AF95E3FA20BB374500FF4D23 /* RealmDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3F920BB374500FF4D23 /* RealmDetailsEntity.swift */; };
+		AF95E3FC20BB37FD00FF4D23 /* RealmAllEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3FB20BB37FD00FF4D23 /* RealmAllEntity.swift */; };
+		AF95E3FE20BB390600FF4D23 /* RealmAttributesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3FD20BB390500FF4D23 /* RealmAttributesEntity.swift */; };
+		AF95E40020BB3A9500FF4D23 /* RealmDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E3FF20BB3A9500FF4D23 /* RealmDataEntity.swift */; };
+		AF95E40220BB3BB400FF4D23 /* RealmUrlEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E40120BB3BB400FF4D23 /* RealmUrlEntity.swift */; };
+		AF95E40420BB3E1800FF4D23 /* RealmCarListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95E40320BB3E1800FF4D23 /* RealmCarListService.swift */; };
 		AFB0589820B55F2900D0CD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0589720B55F2900D0CD98 /* AppDelegate.swift */; };
 		AFB0589A20B55F2900D0CD98 /* CarListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB0589920B55F2900D0CD98 /* CarListController.swift */; };
 		AFB0589F20B55F2900D0CD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB0589E20B55F2900D0CD98 /* Assets.xcassets */; };
@@ -95,6 +107,18 @@
 		AF3742FF20B882AB00E721F8 /* AlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireService.swift; sourceTree = "<group>"; };
 		AF37430220B8834400E721F8 /* AlamofireCarListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireCarListService.swift; sourceTree = "<group>"; };
 		AF37430420B8946C00E721F8 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		AF95E3ED20BB2BBF00FF4D23 /* RealmListCarsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmListCarsResponse.swift; sourceTree = "<group>"; };
+		AF95E3EF20BB308800FF4D23 /* RealmMessagesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMessagesEntity.swift; sourceTree = "<group>"; };
+		AF95E3F120BB33B500FF4D23 /* RealmSessionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSessionEntity.swift; sourceTree = "<group>"; };
+		AF95E3F320BB347B00FF4D23 /* RealmMetadataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMetadataEntity.swift; sourceTree = "<group>"; };
+		AF95E3F520BB35A900FF4D23 /* RealmResultsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmResultsEntity.swift; sourceTree = "<group>"; };
+		AF95E3F720BB36A200FF4D23 /* RealmOptionalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmOptionalEntity.swift; sourceTree = "<group>"; };
+		AF95E3F920BB374500FF4D23 /* RealmDetailsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDetailsEntity.swift; sourceTree = "<group>"; };
+		AF95E3FB20BB37FD00FF4D23 /* RealmAllEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAllEntity.swift; sourceTree = "<group>"; };
+		AF95E3FD20BB390500FF4D23 /* RealmAttributesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAttributesEntity.swift; sourceTree = "<group>"; };
+		AF95E3FF20BB3A9500FF4D23 /* RealmDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataEntity.swift; sourceTree = "<group>"; };
+		AF95E40120BB3BB400FF4D23 /* RealmUrlEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUrlEntity.swift; sourceTree = "<group>"; };
+		AF95E40320BB3E1800FF4D23 /* RealmCarListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCarListService.swift; sourceTree = "<group>"; };
 		AFB0589420B55F2900D0CD98 /* mobdevprototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobdevprototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB0589720B55F2900D0CD98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB0589920B55F2900D0CD98 /* CarListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListController.swift; sourceTree = "<group>"; };
@@ -200,6 +224,41 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		AF95E3EA20BB2B5400FF4D23 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				AF95E3EB20BB2B9200FF4D23 /* Models */,
+				AF95E3EC20BB2B9500FF4D23 /* Services */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		AF95E3EB20BB2B9200FF4D23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF95E3ED20BB2BBF00FF4D23 /* RealmListCarsResponse.swift */,
+				AF95E3EF20BB308800FF4D23 /* RealmMessagesEntity.swift */,
+				AF95E3F120BB33B500FF4D23 /* RealmSessionEntity.swift */,
+				AF95E3F320BB347B00FF4D23 /* RealmMetadataEntity.swift */,
+				AF95E3F520BB35A900FF4D23 /* RealmResultsEntity.swift */,
+				AF95E40120BB3BB400FF4D23 /* RealmUrlEntity.swift */,
+				AF95E3FF20BB3A9500FF4D23 /* RealmDataEntity.swift */,
+				AF95E3FD20BB390500FF4D23 /* RealmAttributesEntity.swift */,
+				AF95E3FB20BB37FD00FF4D23 /* RealmAllEntity.swift */,
+				AF95E3F920BB374500FF4D23 /* RealmDetailsEntity.swift */,
+				AF95E3F720BB36A200FF4D23 /* RealmOptionalEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF95E3EC20BB2B9500FF4D23 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF95E40320BB3E1800FF4D23 /* RealmCarListService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		AFB0588B20B55F2800D0CD98 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +326,7 @@
 			children = (
 				AFDDBDB720B7D630000E2A2B /* Domain */,
 				AF3742DA20B86B1F00E721F8 /* API */,
+				AF95E3EA20BB2B5400FF4D23 /* Realm */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -551,17 +611,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF95E40420BB3E1800FF4D23 /* RealmCarListService.swift in Sources */,
 				AFDDBDB620B73791000E2A2B /* CarListCell.swift in Sources */,
 				AF3742D520B8634500E721F8 /* DetailsEntity.swift in Sources */,
+				AF95E40020BB3A9500FF4D23 /* RealmDataEntity.swift in Sources */,
 				AF3742D920B864EE00E721F8 /* CarListService.swift in Sources */,
 				AFBDF5FD20BA05890008E9D6 /* FilterLauncher.swift in Sources */,
 				AF3742E520B8734000E721F8 /* ApiResultsEntity.swift in Sources */,
+				AF95E3F220BB33B500FF4D23 /* RealmSessionEntity.swift in Sources */,
+				AF95E3FC20BB37FD00FF4D23 /* RealmAllEntity.swift in Sources */,
 				AF3742F920B87FDA00E721F8 /* ApiRoute.swift in Sources */,
 				AFDDBDC320B7DB17000E2A2B /* ResultsEntity.swift in Sources */,
 				AF3742FB20B8824600E721F8 /* ApiContext.swift in Sources */,
 				AF3742FE20B8827600E721F8 /* NonPersistedApiContext.swift in Sources */,
 				AFBDF5FF20BA0E220008E9D6 /* FilterCell.swift in Sources */,
 				AF3742D720B8637F00E721F8 /* OptionalEntity.swift in Sources */,
+				AF95E3F620BB35A900FF4D23 /* RealmResultsEntity.swift in Sources */,
 				AF3742F320B87AEC00E721F8 /* ApiDetailsEntity.swift in Sources */,
 				AF37430020B882AB00E721F8 /* AlamofireService.swift in Sources */,
 				AF3742EF20B8797500E721F8 /* ApiAttributesEntity.swift in Sources */,
@@ -569,13 +634,16 @@
 				AF3742E920B874BC00E721F8 /* ApiUrlEntity.swift in Sources */,
 				AFDDBDC520B7DBB7000E2A2B /* DataEntity.swift in Sources */,
 				AFDDBDC720B7DCEE000E2A2B /* SimplesEntity.swift in Sources */,
+				AF95E3F020BB308800FF4D23 /* RealmMessagesEntity.swift in Sources */,
 				AF37430320B8834400E721F8 /* AlamofireCarListService.swift in Sources */,
 				AF3742F520B87B4A00E721F8 /* ApiOptionalEntity.swift in Sources */,
 				AF3742EB20B8753000E721F8 /* UrlEntity.swift in Sources */,
 				AF3742E120B870D900E721F8 /* ApiSessionEntity.swift in Sources */,
 				AF3742ED20B8796900E721F8 /* ApiSimplesEntity.swift in Sources */,
 				AFDDBDC120B7DA4E000E2A2B /* MetadataEntity.swift in Sources */,
+				AF95E3EE20BB2BBF00FF4D23 /* RealmListCarsResponse.swift in Sources */,
 				AFDDBDBB20B7D73D000E2A2B /* ListCarsResponse.swift in Sources */,
+				AF95E3FA20BB374500FF4D23 /* RealmDetailsEntity.swift in Sources */,
 				AFB0589A20B55F2900D0CD98 /* CarListController.swift in Sources */,
 				AFDDBDB020B5EDB0000E2A2B /* CachedImageView.swift in Sources */,
 				AFDDBDBD20B7D874000E2A2B /* MessagesEntity.swift in Sources */,
@@ -583,13 +651,17 @@
 				AF3742E320B870E100E721F8 /* ApiMetadataEntity.swift in Sources */,
 				AF37430520B8946C00E721F8 /* AlertHelper.swift in Sources */,
 				AF3742D120B861D600E721F8 /* AttributesEntity.swift in Sources */,
+				AF95E3F420BB347B00FF4D23 /* RealmMetadataEntity.swift in Sources */,
 				AFDDBDB420B735A9000E2A2B /* GradientView.swift in Sources */,
+				AF95E40220BB3BB400FF4D23 /* RealmUrlEntity.swift in Sources */,
+				AF95E3F820BB36A200FF4D23 /* RealmOptionalEntity.swift in Sources */,
 				AFDDBDB220B5EDF6000E2A2B /* DiscardableImageCacheItem.swift in Sources */,
 				AF3742F120B87A8100E721F8 /* ApiAllEntity.swift in Sources */,
 				AF3742D320B8627500E721F8 /* AllEntity.swift in Sources */,
 				AFDDBDBF20B7DA09000E2A2B /* SessionEntity.swift in Sources */,
 				AFB0589820B55F2900D0CD98 /* AppDelegate.swift in Sources */,
 				AF3742F720B87F8900E721F8 /* ApiEnvironment.swift in Sources */,
+				AF95E3FE20BB390600FF4D23 /* RealmAttributesEntity.swift in Sources */,
 				AF3742DD20B86F7E00E721F8 /* ApiListCarsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

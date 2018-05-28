@@ -9,6 +9,7 @@
 import Foundation
 
 protocol AttributesEntity: class {
+    var id: Int { get }
     var desc: String { get }
     var year_built: String { get }
     var engine: String { get }

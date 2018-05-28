@@ -9,5 +9,6 @@
 import Foundation
 
 protocol MessagesEntity: class {
+    var id: Int { get }
     var success: [String] { get }
 }

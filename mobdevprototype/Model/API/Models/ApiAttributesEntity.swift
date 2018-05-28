@@ -10,7 +10,8 @@ import Foundation
 import ObjectMapper
 
 class ApiAttributesEntity: NSObject, Mappable, AttributesEntity {
-    
+
+    var id = 1
     var desc = ""
     var year_built = ""
     var engine = ""

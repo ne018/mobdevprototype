@@ -11,6 +11,7 @@ import ObjectMapper
 
 class ApiAllEntity: NSObject, Mappable, AllEntity {
     
+    var id = 1
     private var _details = [ApiDetailsEntity]()
     private var _optional = [ApiOptionalEntity]()
     var details: [DetailsEntity] {
@@ -31,6 +32,5 @@ class ApiAllEntity: NSObject, Mappable, AllEntity {
     func mapping(map: Map){
         _details <- map["details"]
         _optional <- map["optional"]
-        
     }
 }

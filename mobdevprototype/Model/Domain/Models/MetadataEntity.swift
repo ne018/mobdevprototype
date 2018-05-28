@@ -9,6 +9,7 @@
 import Foundation
 
 protocol MetadataEntity: class {
+    var id: Int { get }
     var product_count: String { get }
     var results: [ResultsEntity] { get }
 }

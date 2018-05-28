@@ -9,5 +9,6 @@
 import Foundation
 
 protocol UrlEntity: class{
+    var id: Int { get }
     var url: String { get }
 }

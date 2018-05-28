@@ -11,6 +11,7 @@ import ObjectMapper
 
 class ApiResultsEntity: NSObject, Mappable, ResultsEntity {
     
+    var results_id = 1
     private var _data: ApiDataEntity?
     var data: DataEntity? {
         return _data

@@ -8,7 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
-
+import Alamofire
 
 class CarListController: UICollectionViewController, UICollectionViewDelegateFlowLayout, NVActivityIndicatorViewable {
     
@@ -64,7 +64,9 @@ class CarListController: UICollectionViewController, UICollectionViewDelegateFlo
             navigationItem.title = sortname == "" ? "Carlist" : "Carlist - \(sortname)"
         }
         
-        self.refresh()
+        if self.sortlink != "" {
+            self.refresh()
+        }
     }
     
     func setupNavBarButtons(){
@@ -100,9 +102,10 @@ class CarListController: UICollectionViewController, UICollectionViewDelegateFlo
         
         let env = ApiEnvironment.production
         let context = NonPersistentApiContext(environment: env)
-        let carListService = AlamofireCarListService(context: context)
-
-        carListService.getAllCarList(page: page, maxitems: maxitems, sort: sortlink) { (carlistresult, error) in
+        let baseService = AlamofireCarListService(context: context)
+        let service = RealmCarListService(baseService: baseService)
+        
+        service.getAllCarList(page: page, maxitems: maxitems, sort: sortlink) { (carlistresult, error) in
             if let error = error {
                 self.stopAnimating()
                 self.alertMessage(title: "Network Error", message: "Please connect to internet.")

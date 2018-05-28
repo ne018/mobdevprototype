@@ -9,6 +9,7 @@
 import Foundation
 
 protocol ResultsEntity: class {
+    var results_id: Int { get }
     var data: DataEntity? { get }
     var id: String { get }
     var images: [UrlEntity] { get }

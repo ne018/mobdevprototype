@@ -9,6 +9,7 @@
 import Foundation
 
 protocol AllEntity: class {
+    var id: Int { get }
     var details: [DetailsEntity] { get }
     var optional: [OptionalEntity] { get }
 }

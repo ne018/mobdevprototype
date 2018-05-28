@@ -19,6 +19,7 @@ class ApiOptionalEntity: NSObject, Mappable, OptionalEntity{
         super.init()
     }
     
+    var id = 1
     var name = ""
     var label = ""
     var label_en = ""

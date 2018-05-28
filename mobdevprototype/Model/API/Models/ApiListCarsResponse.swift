@@ -21,6 +21,7 @@ class ApiListCarsResponse: NSObject, Mappable, ListCarsResponse {
     }
     
     // Properties
+    var id = 1
     var success = false
     var _messages: ApiMessagesEntity?
     var messages: MessagesEntity? {
