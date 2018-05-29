@@ -2,6 +2,13 @@
 
 Mobile Developer Test Prototype for pre-examination for job application.
 
+## Preview Image
+
+<p align="center"> 
+<img src="readme_img/preview-colview.png">
+<img src="readme_img/preview-filter.png">
+</p>
+
 ## Getting Started
 
 These repo will get you a copy of the project up and running on your local machine for development and testing purposes.
