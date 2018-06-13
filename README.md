@@ -38,7 +38,7 @@ XCode supported Swift version 3.2
 
 ## Authors
 
-* **Adrian Millena** 
+* [Adrian Millena](https://www.facebook.com/drey01819) 
 
 ## License
 
