@@ -36,7 +36,7 @@ XCode supported Swift version 3.2
 
 - Carlist v.1.0
 
-## Authors
+## Author
 
 * [Adrian Millena](https://www.facebook.com/drey01819) 
 
